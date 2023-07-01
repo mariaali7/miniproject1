@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bevan&family=Kablammo&family=Sigmar&family=Titan+One&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/0b0c34f5dd.js" crossorigin="anonymous"></script>
+
+
+    <style>
+     .navbar {display:flex; flex-direction: row; background-color: rgb(117, 112, 112); color: #cac3c3; justify-content: space-between; margin-top: -12px; margin-left: -8px; margin-right:-8px ; font-size: 15px; height: 50px;}
+     .screen ul {display: flex; flex-direction: row; justify-content: end; }
+     .screen li {padding:14px 10px; border-left:.1px solid rgb(210, 203, 203); margin-top: -10px; }
+     .screen li:hover{ background-color: black; color: white;}
+
+
+
+
+    .menu {display: flex; flex-direction: row; height: 30px; margin-top: 15px; background-color: #7e7a7a; margin-top: 0px; margin-left: 9.4%; margin-right: 9.4%; padding-top: 12px; padding-bottom: 12px;}
+    .menu ul{display: flex; flex-direction: row; margin-top: -3px;}
+    .menu li {list-style: none; padding: 7px; margin-top: -2px; }
+    .menu li button{ border: none; background: none; text-transform: uppercase; font-size: 10px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-weight: bold; color: black;}
+    .menu li button:hover {text-decoration: underline; text-decoration-color: rgb(230, 149, 1); text-decoration-thickness: 2px;}
+    .menu button{ border-radius:80px; border: none; margin-left: 10px; color: white; font-family: Georgia, 'Times New Roman', Times, serif;}
+    .menu img{ height:20px; margin-top: 3px;}
+
+
+
+
+     .header {background-color: black; height:  430px; margin-left: -8px; margin-right: -10px; padding-left: 20px; display: flex; flex-direction: row;}
+     .header h5{color: red; margin-top: 60px; margin-left: 80px; font-family: 'Times New Roman', Times, serif; font-weight: lighter; font-size: 12px;}
+     .header h1{color: white; font-size: 49px; padding-top: 0px; margin-left: 80px;}
+     .header button{ border: none; border-radius: 80px; height: 30px; width: 120px; margin-left: 80px; font-family: Georgia, 'Times New Roman', Times, serif; color: white;}
+     .header img { height: 380px; width: 270px; margin-left: 190px; margin-top: 50px; margin-bottom: 0px;} 
+
+
+
+
+     .timer{background-image: url(./backbutton2.jpg); background-size: cover; height: 150px; margin-top: -1px; margin-left: -8px; margin-right: -8px; display: flex; flex-direction: row;}
+     .timer h3{ color: white; margin-left: 100px;}
+     .timer h2{ color: white; margin-left: 100px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;}
+     .timer ul{list-style: none; display: flex; flex-direction: row; justify-content: space-between; }
+     .timer li{border: 1px solid white; padding: 0px; border-radius: 8px; margin-right:20px;margin-top:25px ; width: 50px; color: white; text-align: center; font-size: larger; font-weight: bold; height: 60px; font-size: 12px; }
+     .timer span{ font-size: 25px;}
+
+    
+
+
+     .about {display: flex; flex-direction: row; height: 400px; margin-top: 80px; margin-left:90px; width: 750px;}
+     .about img{ margin-right: 40px;}
+     .about h3{ margin-top: 40px; font-size: 25px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+     .about p{color: #7e7a7a; font-size: 13px; font-family: 'Times New Roman', Times, serif;}
+     .about ul{list-style: none;color: #7e7a7a; font-size: 13px; font-family: 'Times New Roman', Times, serif; }
+     .about li{margin-left: -40px; font-size: 12px;}
+     .about li:before {content: "\2714"; color: red; font-size: 13px;}
+     .about a{color: black; font-size: 10px; font-weight: bold; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; text-decoration: underline; text-decoration-color: red; text-decoration-thickness: 1px; padding-bottom: 5px;}
+
+
+
+
+     .speakers img{ width: 200px;}
+     .speakers{ display: grid; grid-template-rows:repeat(2 ,1fr); grid-template-columns: repeat(5 ,200px); grid-area: 1; margin-left: -8px; margin-right: -8px; gap: 0px; overflow-x: hidden;}
+
+
+     
+     .schedule ul{list-style: none; display: flex; flex-direction: row; justify-content: center; box-shadow: #cac3c3; box-shadow: #7e7a7a; margin-bottom: 20px;}
+     .schedule li{border:1px solid rgb(211, 210, 210); margin-right:0px; text-align: center; width: 160px; height: 50px; border-radius: 2px;}
+     .schedule li h5{margin-top: 5px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-weight: bold;}
+     .schedule li h6{color: #cac3c3; margin-top: -10px;}
+     .schedule li:hover{ background-image: url(./backbutton2.jpg); background-size: cover; color: white;}
+     
+
+
+      
+
+    
+     .schedule1{ margin-top: 70px; display: flex; flex-direction:row; justify-content:start; margin-left: 100px; margin-right: 60px; border:1px solid silver; margin-top:10px;}
+     .part1{ }
+     .part1 img{border-radius: 50%; height: 80px; width: 80px; margin-top: 20px; margin-left: 40px; margin-bottom:20px ; }
+     .part2{margin-left: 50px; margin-top:17px;}
+     .part2 p{font-size: 13px; color: #7e7a7a; margin-top: -5px;  }
+     .part3{margin-left: 80px; margin-top:30px; }
+     .part3 p{font-size: 13px; color: #7e7a7a;}
+
+
+
+     
+     .main-cards{display: flex; flex-direction: row; justify-content: center; padding-right: 0px;padding-left: 0px; row-gap: 0;}
+     .ticket-price{background-image: url(./pricing-bg.jpg.webp); background-size: cover; height: 600px; margin-left: -8px; margin-right: -10px;}
+     .ticket-header{text-align: center; padding-bottom: 25px;}
+     .ticket-header h2{color: white; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;padding-top: 60px;}
+     .ticket-header p{color: #7e7a7a; font-family:'Times New Roman', Times, serif; margin-top:-2px;}
+     .card {border-radius: 1%; background-color: white; width: 240px; display: flex; flex-direction: column; justify-content: center; margin-left: 10px; margin-top: 50px; height: 310px;}
+     .price-header{font-weight: bold; color: black; padding-top: 10px;}
+     .card h2{text-align: center; font-size: 17px; font-weight: bold;}
+     .price{background-image: url(./backbutton2.jpg); color: white; font-weight: bold; background-repeat: no-repeat; text-align: center; font-size: 35px; margin-top: 0px; margin-bottom: 5px;}
+     .card ul{list-style: none; color: #7e7a7a; text-align: start; font-size: 13px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; margin-bottom: 40px; }
+     .card li{padding-top: 7px; padding-bottom: 7px; text-align: center; margin-right: 45px;}
+     .card button{ width: 175px; margin-left: 35px; border: none; border-radius: 80px; height: 100px; padding: 5px; font-family: Arial, Helvetica, sans-serif; font-weight: lighter; font-size: 10px; background-color: white; box-shadow:1px 1px 1px 1px #eae6e6f7;}
+     #card2{ height: 350px; margin-top: 30px;}
+     #card2 ul{margin-bottom: 75px;}
+
+
+
+
+
+
+
+
+
+     .news{display: flex; flex-direction: row;}
+     .news1{background-image: url(./8.webp); height: 360px; width: 350px; background-size: cover; text-align: left; margin-left:120px ; margin-right: 60px;}
+     .title{font-size: 12px; padding: 5px 10px; background-image: url(./backbutton2.jpg); background-size: cover; color: white; width: 50px; height: 11px; margin-bottom: 245px; margin-top: 15px; margin-left: 20px; }
+     .newslink{color: white; font-weight: bold; text-decoration-line: none; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;font-size: 16px; margin-bottom: 15px; margin-left: 15px;  text-align: center;}
+     .time{color: white; font-size: 12px; margin-left: 15px;}
+
+
+     .news2 {display: flex; flex-direction: column;}
+     .npart1{background: url(./latest-2.jpg.webp); background-size: cover; width: 350px; height: 170px;  margin-bottom: 35px;}
+     .npart1 .title {margin-bottom: 70px; margin-left: 20px;}
+     .npart1 .newslink{ margin-left: 15px; font-size: 13px;}
+     .npart1 .time{margin-top: 7px;}
+
+
+     .npart2{background-image: url(./latest-3.jpg.webp); background-size: cover;width: 350px; height: 170px; margin-top: -15px; }
+     .npart2 .title {margin-bottom: 70px; margin-left: 20px;}
+     .npart2 .newslink{ margin-left: 15px; font-size: 13px;}
+     .npart2 .time{margin-top: 7px;}
+
+
+
+
+
+     .subscribe{background-image: url(./newslatter-bg.jpg.webp); background-size: cover; display: flex; flex-direction: row; height: 110px; width: 760px; margin-left: 120px; margin-top: 50px;}
+     .subscribe input{border-radius: 80px; border: none; color: #cac3c3; font-weight: lighter; height: 30px; width: 200px; outline: none;}
+     .subscribe button{border: none; background-image: url(./backbutton2.jpg); background-size:cover; border-radius: 80px; color: white; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-weight: bold; height: 25px; margin-left: -75px;}
+
+
+     .location{display: flex; flex-direction: row;}
+     .location img{width: 400px; height: 300px; margin-left: 110px; margin-top: 100px; }
+     .form{margin-left:120px ; }
+     
+
+
+     .footer{background-color: black; height: 350px;}
+     .sponsers{display: flex; flex-direction: row; justify-content: center;  }
+     .sponsers img{width: 60px; height: 20px; margin-right: 50px; margin-top: 50px;}
+
+     .end{display: flex; flex-direction: column; justify-content: center;}
+     .end img{width:80px; height: 30px; margin-left: 440px;}
+     .end .menu2{display: flex; flex-direction: row; justify-content:center; margin-left: -60px;}
+     .menu2 ul{list-style: none; }
+     .menu2 li button{border: none; background: none; text-transform: uppercase; font-size: 9px; color: #7e7a7a; }
+     .menu2 li{ padding: 7px; margin-top: -2px; }
+     .menu2 li button:hover{color:#f10404;}
+     .end p{color: #7e7a7a; font-size: 10px; margin-left: 310px;}
+     .social{display: flex; flex-direction: row; justify-content: center; color: #7e7a7a; list-style: none; margin-left: -60px}
+     .social li{padding: 7px; margin-top: -2px; }
+    </style>
+</head>
+<body>
+    <div class= "navbar">
+    <article style="display: flex;">
+     <p style="color: white; font-size: 24px; margin-right:20px; margin-top: 14px;">Colorib<span style="color: green; ;">.</span></p>
+     <p style=" background-color: #494848; padding: 24px 15px; margin-top: -4px; margin-bottom: 0px;">+   MANUP</p></article>
+     <div class="screen">
+        <ul style="list-style: none;">
+            <li><i class="fa-solid fa-desktop"> </i></li>
+            <li><i class="fa-solid fa-tablet-screen-button"></i></li>
+            <li><i class="fa-solid fa-mobile-screen-button"></i></li>
+            <li style="background-color: rgb(144, 225, 144); color: white;" onmouseover="this.style.background='black';" onmouseout="this.style.backgroundColor='rgb(144, 225, 144)';"><i class="fa-solid fa-cart-shopping"></i></li>
+            <li><i class="fa-solid fa-xmark"></i></li>
+        </ul>
+     </div>
+    </div>
+      
+
+    <div class="menu">
+         <img src="./logo.png.webp"> 
+
+       <ul>
+        <li><button style="text-decoration: underline; text-decoration-color: rgb(230, 149, 1); text-decoration-thickness: 2px;">home</button></li>
+        <li><button>about</button></li>
+        <li><button>speakers</button></li>
+        <li><button>schedule</button></li>
+        <li><button>blog</button></li>
+        <li><button>contacts</button></li>
+       </ul>
+
+       <button style="width: 90px; margin-left: 63px; text-align: right; background-image: url(./backbutton2.jpg); background-size: cover; text-align: center;"><i class="fa-solid fa-ticket" style="color: #d7d8da;"></i>Ticket</button>
+
+
+    </div>
+
+
+
+    <div  class="header">
+       <article style="margin-top: 50px;"> <br><br>
+        <h5>5 TO 9 MAY 2019, MARDAVALL HOTEL, NEW YORK</h5>
+    
+        <h1 style="font-size: 40px;">Change Your Mind <br> To Become Sucess</h1>
+       
+        <button style=" text-align: right; background-image: url(./backbutton2.jpg); background-size: cover; text-align: center;">Buy Ticket</button></article>
+
+        <img src="./h1back.webp">
+
+    </div>
+
+
+
+    <div class="timer">
+        <article style="padding-right: 280px; margin-top: 10px;">
+        <h3>Conference Date</h3>
+        <h2>Count Every Second <br> Until the Event</h2></article>
+
+
+        <ul>
+            <li><span>29</span><br> Days</li>
+            <li><span>00</span><br> Hrs</li>
+            <li><span>00</span><br> Mins</li>
+            <li><span>00</span><br> Secs</li>
+        </ul>
+    </div>
+
+
+
+    <div class="about">
+     <img src="./pic1.webp" alt="">
+     <article>
+        <h3>About Conference</h3>
+        <p>When I first got into the online advertising business, I was looking for the magical combination that would put my website into the top search engine rankings, catapult me to the forefront of the minds or individuals looking to buy my product, and generally make me rich beyond my wildest dreams! After succeeding in the business for this long, I’m able to look back on my old self with this kind of thinking and shake my head.</p>
+
+
+        <ul>
+            <li>Write On Your Business Card</li>
+            <li>Advertising Outdoors</li>
+            <li>Effective Advertising Pointers</li>
+            <li>Kook 2 Directory Add Url Free</li>
+        </ul>
+
+        <a href="https://preview.colorlib.com/#manup">Discover Now</a>
+     </article>
+    </div>
+
+
+
+    <div style="text-align: center; margin-top: 80px;">
+        <h2 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-weight: bold; font-size: 30px;">Who’s speaking</h2>
+        <h5 style=" font-family: 'Times New Roman', Times, serif ;color:#7e7a7a ; font-size: 12px;">These are our communicators, you can see each person information</h5>
+    </div>
+
+
+
+    <div class="speakers">
+        <img src="./1.webp" alt=""><img src="./2.webp" alt=""><img src="./3.webp" alt=""><img src="./4.webp" alt=""><img src="./5.webp" alt=""><img src="./6.webp" alt=""><img src="./7.webp" alt=""><img src="./8.webp" alt=""><img src="./9.webp" alt=""><img src="./10.webp" alt="">
+    </div>
+
+
+
+
+
+    <div style="text-align: center; margin-top: 80px;">
+        <h2 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-weight: bold; font-size: 30px;">Our Schedule</h2>
+        <h5 style=" font-family: 'Times New Roman', Times, serif ;color:#7e7a7a ; font-size: 12px;">Do not miss anything topic about the event</h5>
+    </div>
+
+
+
+    <div class="schedule">
+      <ul>
+        <li style="background-image: url(./backbutton2.jpg); background-size: cover;"><h5 style="color: white;">Day 1</h5><h6 style="color: white;"> 04, 2019</h6></li>
+        <li><h5>Day 2</h5><h6> 05, 2019</h6></li>
+        <li><h5>Day 3</h5><h6> 06, 2019</h6></li>
+        <li><h5>Day 4</h5><h6> 07, 2019</h6></li>
+        <li><h5>Day 5</h5><h6> 08, 2019</h6></li>
+      </ul>
+    </div>
+
+
+
+    <div class="ourschedule">
+        <article class="schedule1">
+             <article class="part1">
+             <img src="./schedule-1.jpg"></article>
+        
+             <article class="part2">
+              <h3>Dealing with Difficult People</h3>
+              <p><i class="fa-solid fa-user" style="color: #f10404;"></i> John Smith  /  <i class="fa-solid fa-envelope" style="color: #f10404;"></i>  john@Colorlib.com</p>
+             </article>
+
+             <article class="part3">
+                <p><i class="fa-regular fa-clock" style="color: #f10404;"></i> 08:00 am - 10:00 AM</p>
+                <p><i class="fa-solid fa-location-dot" style="color: #f10404;"></i>  59 Breanne Canyon Suite, USA</p>
+             </article>
+        </article>
+
+
+
+        <article class="schedule1">
+            <article class="part1">
+            <img src="./schedule-2.jpg"></article>
+       
+            <article class="part2">
+             <h3>V7 Digital Photo Printing</h3>
+             <p><i class="fa-solid fa-user" style="color: #f10404;"></i> John Smith  /  <i class="fa-solid fa-envelope" style="color: #f10404;"></i>  john@Colorlib.com</p>
+            </article>
+
+            <article class="part3">
+               <p><i class="fa-regular fa-clock" style="color: #f10404;"></i> 08:00 am - 10:00 AM</p>
+               <p><i class="fa-solid fa-location-dot" style="color: #f10404;"></i>  59 Breanne Canyon Suite, USA</p>
+            </article>
+       </article>
+
+
+
+
+       <article class="schedule1">
+        <article class="part1">
+        <img src="./schedule-3.jpg"></article>
+   
+        <article class="part2">
+         <h3>Beyond The Naked Eye</h3>
+         <p><i class="fa-solid fa-user" style="color: #f10404;"></i> John Smith  /  <i class="fa-solid fa-envelope" style="color: #f10404;"></i>  john@Colorlib.com</p>
+        </article>
+
+        <article class="part3">
+           <p><i class="fa-regular fa-clock" style="color: #f10404;"></i> 08:00 am - 10:00 AM</p>
+           <p><i class="fa-solid fa-location-dot" style="color: #f10404;"></i>  59 Breanne Canyon Suite, USA</p>
+        </article>
+      </article>
+
+
+    <article class="schedule1">
+    <article class="part1">
+    <img src="./schedule-4.jpg"></article>
+
+    <article class="part2">
+     <h3>Influencing The Influencer</h3>
+     <p><i class="fa-solid fa-user" style="color: #f10404;"></i> John Smith  /  <i class="fa-solid fa-envelope" style="color: #f10404;"></i>  john@Colorlib.com</p>
+    </article>
+
+    <article class="part3">
+       <p><i class="fa-regular fa-clock" style="color: #f10404;"></i> 08:00 am - 10:00 AM</p>
+       <p><i class="fa-solid fa-location-dot" style="color: #f10404;"></i>  59 Breanne Canyon Suite, USA</p>
+    </article>
+    </article>
+    </div>
+
+
+
+
+
+    <div class="ticket-price">
+        <article class="ticket-header">
+            <h2 style="margin-top: 60px;">Ticket Pricing</h2>
+            <p>Get your event ticket plan </p>
+        </article>
+      <article class="main-cards">
+        <article class="card">
+         <h2 class="price-header">1 DAY PASS</h2>
+         <h1 class="price"><sup>$</sup>129</h1>
+         <ul>
+          <li>One Day Conference Ticket</li>
+          <li>Coffee-break</li>
+          <li>Lunch and Networking</li>
+          <li>Keynote talk</li>
+          <li>Talk to the Editors Session</li>
+         </ul>
+         <button>Get Ticket <i class="fa-solid fa-arrow-right" style="color: #f10404; font-size: 8px;"></i></button>
+        </article>
+
+
+        <article class="card" id="card2">
+         <h2 class="price-header">FULL PASS</h2>
+         <h1 class="price"><sup>$</sup>199</h1>
+         <ul>
+          <li>One Day Conference Ticket</li>
+          <li>Coffee-break</li>
+          <li>Lunch and Networking</li>
+          <li>Keynote talk</li>
+          <li>Talk to the Editors Session</li>
+         </ul>
+         <button>Get Ticket <i class="fa-solid fa-arrow-right" style="color: #f10404; font-size: 8px;"></i></button>
+        </article>
+
+
+
+        <article class="card">
+         <h2 class="price-header">GROUP PASS </h2>
+         <h1 class="price"><sup>$</sup>79</h1>
+         <ul>
+          <li>One Day Conference Ticket</li>
+          <li>Coffee-break</li>
+          <li>Lunch and Networking</li>
+          <li>Keynote talk</li>
+          <li>Talk to the Editors Session</li>
+         </ul>
+         <button>Get Ticket <i class="fa-solid fa-arrow-right" style="color: #f10404; font-size: 8px;"></i></button>
+        </article> 
+       </article>
+    </div>
+
+
+
+
+
+    <div style="text-align: center; margin-top: 80px; margin-bottom:40px ;">
+        <h2 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-weight: bold; font-size: 30px; margin-bottom: -15px;">Latest News</h2>
+        <h5 style=" font-family: 'Times New Roman', Times, serif ;color:#7e7a7a ; font-size: 12px;">Do not miss anything topic abput the event</h5>
+    </div>
+
+
+
+
+    <div class="news">
+       <article class="news1">
+        <p class="title">Marketing</p>
+        <a href="https://preview.colorlib.com/theme/manup/#tabs-1" class="newslink">Improve You Business Cards And &nbsp;&nbsp;Enchan Your Sales</a>
+        <p class="time"><i class="fa-regular fa-clock" style="color: #f10404;"></i>19th May, 2019</p>
+       </article>
+
+       <article class="news2">
+        <article class="npart1">
+           
+            <p class="title">Experience</p>
+            <a href="https://preview.colorlib.com/theme/manup/#tabs-1" class="newslink">All users on MySpace will know that there are &nbsp;&nbsp;millions of people out there.</a>
+            <p class="time"><i class="fa-regular fa-clock" style="color: #f10404;"></i>19th May, 2019</p> 
+
+
+        </article>
+
+        <article class="npart2">
+            
+            <p class="title">Experience</p>
+            <a href="https://preview.colorlib.com/theme/manup/#tabs-1" class="newslink">All users on MySpace will know that there are &nbsp;&nbsp;millions of people out there.</a>
+            <p class="time"><i class="fa-regular fa-clock" style="color: #f10404;"></i>19th May, 2019</p> 
+
+
+        </article>
+
+       </article>
+
+    </div>
+     
+
+
+
+
+
+
+
+     <div class="subscribe">
+      
+        <article style="text-align: left; margin-top: 0px; margin-bottom:40px ; margin-left: 40px;">
+            <h3 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-weight: bold; font-size: 30px; margin-bottom: -15px; color: white;">Subscribe Newsletter</h3>
+            <h5 style=" font-family: 'Times New Roman', Times, serif ;color:#ffffff ; font-size: 12px;">Subscribe to our newsletter and don’t miss anything</h5>
+        </article>    
+        <article style="margin-left: 180px; margin-top: 40px;">
+        <input type="email" value="your email" ><button>subscribe</button>
+        </article>
+
+     </div> 
+
+    
+
+
+
+
+
+
+     <div class="location">
+     <article class="form">
+        <article style="text-align: left; margin-top: 80px;">
+            <h2 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-weight: bold; font-size: 30px;">Location</h2>
+            <h5 style="margin-top: -17px; font-family: 'Times New Roman', Times, serif ;color:#7e7a7a ; font-size: 12px; font-weight: lighter;">Get directions to our event center</h5>
+        </article>
+        <p style="font-size: 12px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+         <span style="font-family: 'Times New Roman', Times, serif ;color:#7e7a7a ; font-size: 12px;">Address:</span>
+         <br> <br> 01 Pascale Springs Apt. 339, NY City
+         United State </p>
+        <p style="font-size: 12px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+          <span style="font-family: 'Times New Roman', Times, serif ;color:#7e7a7a ; font-size: 12px;">Phone:</span>
+          <br> <br> (+12)-345-67-8910 </p>
+        <p style="font-size: 12px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+         <span style="font-family: 'Times New Roman', Times, serif ;color:#7e7a7a ;font-size: 12px;">Email:</span>
+         <br> <br> info.colorlib@gmail.com</p>    
+         <p style="font-size: 12px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+            <span style="font-family: 'Times New Roman', Times, serif ;color:#7e7a7a ; font-size: 12px;">Website:</span>
+           <br> <br> https://conference.colorlib.com</p>
+          
+     </article>
+
+     <img src="./location.png" alt="">
+
+     </div>
+
+
+
+
+     <div class="footer">
+        <article class="sponsers">
+            <img src="./logo-1.png" alt=""><img src="./logo-2.png" alt=""><img src="./logo-3.png" alt=""><img src="./logo-4.png" alt=""><img src="./logo-5.png" alt="">
+        </article>
+        <br><br>
+        <hr style="border: none; border-top: 0.2px solid rgb(110, 108, 108); width: 520px; margin-left: 205px; ">
+        <br><br>
+
+       <article class="end">
+       <img src="./logo.png.webp" href="https://preview.colorlib.com/theme/manup/#tabs-1">
+       <ul class="menu2">
+        <li><button>home</button></li>
+        <li><button>speakers</button></li>
+        <li><button>schedule</button></li>
+        <li><button>blog</button></li>
+        <li><button>contacts</button></li>
+       </ul>
+       <p>Copyright ©2023 All rights reserved | This template is made with <i class="fa-solid fa-heart" style="color: #f10404;"></i> by Colorlib</p>
+
+       <ul class="social">
+        <li><i class="fa-brands fa-facebook"style="color: #7e7a7a;"></i></li>
+        <li><i class="fa-brands fa-twitter"style="color: #7e7a7a;"></i></li>
+        <li><i class="fa-brands fa-linkedin"style="color: #7e7a7a;"></i></li>
+        <li><i class="fa-brands fa-instagram"style="color: #7e7a7a;"></i></li>
+        <li><i class="fa-brands fa-youtube" style="color: #7e7a7a;"></i></li>
+       </ul>
+       </article>
+     </div>
+
+</body>
+</html>
